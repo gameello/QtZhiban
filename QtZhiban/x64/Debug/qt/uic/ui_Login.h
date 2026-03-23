@@ -11,7 +11,6 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QComboBox>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
@@ -27,7 +26,7 @@ public:
     QLabel *label_2;
     QWidget *layoutWidget;
     QVBoxLayout *verticalLayout;
-    QComboBox *comboBox;
+    QLineEdit *lineEdit;
     QLineEdit *lineEdit_password;
     QWidget *layoutWidget_2;
     QHBoxLayout *horizontalLayout;
@@ -50,11 +49,10 @@ public:
         verticalLayout->setContentsMargins(11, 11, 11, 11);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
-        comboBox = new QComboBox(layoutWidget);
-        comboBox->setObjectName(QString::fromUtf8("comboBox"));
-        comboBox->setStyleSheet(QString::fromUtf8(""));
+        lineEdit = new QLineEdit(layoutWidget);
+        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
 
-        verticalLayout->addWidget(comboBox);
+        verticalLayout->addWidget(lineEdit);
 
         lineEdit_password = new QLineEdit(layoutWidget);
         lineEdit_password->setObjectName(QString::fromUtf8("lineEdit_password"));

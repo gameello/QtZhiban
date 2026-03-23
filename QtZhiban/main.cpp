@@ -91,7 +91,7 @@ int main(int argc, char* argv[])
  //        // QString user = usernameEdit.text();
  //        // qtzhiban.cpp 103行拿到这里，席位编号从1开始
  //        int seatindex = combox.currentIndex() + 1;
- //        memoryDataService->SetCurrSeatName(seatindex);
+ //        memoryDataService->SetCurrentLoginID(seatindex);
  //        QString pass = passwordEdit.text();
  //        // 这里应该是验证用户名和密码的逻辑
  //        if (/*user == "admin" && */pass == "2020")

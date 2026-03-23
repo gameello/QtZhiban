@@ -129,7 +129,7 @@ void QtZhiban::InitWidget()
     connect(m_titleBar, SIGNAL(signalButtonCloseClicked()), this, SLOT(onButtonCloseClicked()));
 
     m_titleBar->setTitleIcon(":/QtZhiban/Resources/MyTitle/titleIcon.png");
-    QString xiweiName = memoryDataService->GetSeatMap().value(xiweiID).name;
+    QString xiweiName = memoryDataService->GetLoginMap().value(xiweiID).name;
     m_titleBar->setTitleContent(QStringLiteral("一号台辅助应用   登录席位：") + xiweiName);
     m_titleBar->setButtonType(MIN_MAX_BUTTON);
     m_titleBar->setTitleWidth(this->width());
@@ -193,16 +193,16 @@ void QtZhiban::Loadini()
  //    QString namelist = settings.value("Seat/xiwei", "").toString();
 	// // QString Seatnames = settingService->GetQStringProperty((char*)"Seat/xiwei", (char*)"");
 	// // QStringList sa = Seatnames.split(QString::fromLocal8Bit("，"));
-	// memoryDataService->AddSeatNameList(sslist);
+	// memoryDataService->SetLoginList(sslist);
 
 
     // 打开文档编辑界面，默认席位七
-    currSeeXiweiID = memoryDataService->GetSeatName();
+    currSeeXiweiID = memoryDataService->GetCurrentLoginID();
 
     // 读取当前席位,从1开始
     // xiweiID = settings.value("Seat/currSeat").toInt();
-    // memoryDataService->SetCurrSeatName(xiweiID);
-    xiweiID = memoryDataService->GetSeatName();
+    // memoryDataService->SetCurrentLoginID(xiweiID);
+    xiweiID = memoryDataService->GetCurrentLoginID();
 }
 
 void QtZhiban::SetStatusWidget()

@@ -50,7 +50,6 @@ public:
     QHBoxLayout *horizontalLayout_5;
     QLineEdit *lineEdit_8;
     QPushButton *pushButton_7;
-    QPushButton *pushButton_8;
     QGroupBox *groupBox;
     QVBoxLayout *verticalLayout_3;
     QGridLayout *gridLayout;
@@ -70,8 +69,13 @@ public:
     QComboBox *comboBox;
     QTableWidget *tableWidget_2;
     QGroupBox *groupBox_3;
-    QHBoxLayout *horizontalLayout_3;
+    QVBoxLayout *verticalLayout_9;
     QTextEdit *textEdit_2;
+    QHBoxLayout *horizontalLayout_6;
+    QSpacerItem *horizontalSpacer;
+    QPushButton *pushButton_19;
+    QPushButton *pushButton_13;
+    QPushButton *pushButton_18;
     QWidget *tab_4;
     QVBoxLayout *verticalLayout_2;
     QTabWidget *tabWidget_2;
@@ -180,6 +184,7 @@ public:
         verticalLayout_4->setSpacing(6);
         verticalLayout_4->setContentsMargins(11, 11, 11, 11);
         verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
+        verticalLayout_4->setContentsMargins(-1, -1, -1, 6);
         tableWidget_3 = new QTableWidget(groupBox_2);
         if (tableWidget_3->columnCount() < 4)
             tableWidget_3->setColumnCount(4);
@@ -226,6 +231,7 @@ public:
         verticalLayout_8->setSpacing(6);
         verticalLayout_8->setContentsMargins(11, 11, 11, 11);
         verticalLayout_8->setObjectName(QString::fromUtf8("verticalLayout_8"));
+        verticalLayout_8->setContentsMargins(-1, -1, -1, 6);
         textEdit = new QTextEdit(groupBox_4);
         textEdit->setObjectName(QString::fromUtf8("textEdit"));
         textEdit->setStyleSheet(QString::fromUtf8(""));
@@ -245,11 +251,6 @@ public:
 
         horizontalLayout_5->addWidget(pushButton_7);
 
-        pushButton_8 = new QPushButton(groupBox_4);
-        pushButton_8->setObjectName(QString::fromUtf8("pushButton_8"));
-
-        horizontalLayout_5->addWidget(pushButton_8);
-
 
         verticalLayout_8->addLayout(horizontalLayout_5);
 
@@ -262,6 +263,7 @@ public:
         verticalLayout_3->setSpacing(6);
         verticalLayout_3->setContentsMargins(11, 11, 11, 11);
         verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
+        verticalLayout_3->setContentsMargins(-1, -1, -1, 6);
         gridLayout = new QGridLayout();
         gridLayout->setSpacing(6);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
@@ -341,8 +343,8 @@ public:
         verticalLayout_3->addLayout(gridLayout);
 
         tableWidget_2 = new QTableWidget(groupBox);
-        if (tableWidget_2->columnCount() < 7)
-            tableWidget_2->setColumnCount(7);
+        if (tableWidget_2->columnCount() < 8)
+            tableWidget_2->setColumnCount(8);
         QTableWidgetItem *__qtablewidgetitem4 = new QTableWidgetItem();
         tableWidget_2->setHorizontalHeaderItem(0, __qtablewidgetitem4);
         QTableWidgetItem *__qtablewidgetitem5 = new QTableWidgetItem();
@@ -357,6 +359,8 @@ public:
         tableWidget_2->setHorizontalHeaderItem(5, __qtablewidgetitem9);
         QTableWidgetItem *__qtablewidgetitem10 = new QTableWidgetItem();
         tableWidget_2->setHorizontalHeaderItem(6, __qtablewidgetitem10);
+        QTableWidgetItem *__qtablewidgetitem11 = new QTableWidgetItem();
+        tableWidget_2->setHorizontalHeaderItem(7, __qtablewidgetitem11);
         tableWidget_2->setObjectName(QString::fromUtf8("tableWidget_2"));
 
         verticalLayout_3->addWidget(tableWidget_2);
@@ -367,14 +371,40 @@ public:
         groupBox_3 = new QGroupBox(tab_1);
         groupBox_3->setObjectName(QString::fromUtf8("groupBox_3"));
         groupBox_3->setMinimumSize(QSize(0, 0));
-        horizontalLayout_3 = new QHBoxLayout(groupBox_3);
-        horizontalLayout_3->setSpacing(6);
-        horizontalLayout_3->setContentsMargins(11, 11, 11, 11);
-        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
+        verticalLayout_9 = new QVBoxLayout(groupBox_3);
+        verticalLayout_9->setSpacing(6);
+        verticalLayout_9->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_9->setObjectName(QString::fromUtf8("verticalLayout_9"));
+        verticalLayout_9->setContentsMargins(-1, -1, -1, 6);
         textEdit_2 = new QTextEdit(groupBox_3);
         textEdit_2->setObjectName(QString::fromUtf8("textEdit_2"));
 
-        horizontalLayout_3->addWidget(textEdit_2);
+        verticalLayout_9->addWidget(textEdit_2);
+
+        horizontalLayout_6 = new QHBoxLayout();
+        horizontalLayout_6->setSpacing(6);
+        horizontalLayout_6->setObjectName(QString::fromUtf8("horizontalLayout_6"));
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_6->addItem(horizontalSpacer);
+
+        pushButton_19 = new QPushButton(groupBox_3);
+        pushButton_19->setObjectName(QString::fromUtf8("pushButton_19"));
+
+        horizontalLayout_6->addWidget(pushButton_19);
+
+        pushButton_13 = new QPushButton(groupBox_3);
+        pushButton_13->setObjectName(QString::fromUtf8("pushButton_13"));
+
+        horizontalLayout_6->addWidget(pushButton_13);
+
+        pushButton_18 = new QPushButton(groupBox_3);
+        pushButton_18->setObjectName(QString::fromUtf8("pushButton_18"));
+
+        horizontalLayout_6->addWidget(pushButton_18);
+
+
+        verticalLayout_9->addLayout(horizontalLayout_6);
 
 
         gridLayout_6->addWidget(groupBox_3, 1, 0, 2, 1);
@@ -526,20 +556,20 @@ public:
         tableWidget = new QTableWidget(tab_2);
         if (tableWidget->columnCount() < 7)
             tableWidget->setColumnCount(7);
-        QTableWidgetItem *__qtablewidgetitem11 = new QTableWidgetItem();
-        tableWidget->setHorizontalHeaderItem(0, __qtablewidgetitem11);
         QTableWidgetItem *__qtablewidgetitem12 = new QTableWidgetItem();
-        tableWidget->setHorizontalHeaderItem(1, __qtablewidgetitem12);
+        tableWidget->setHorizontalHeaderItem(0, __qtablewidgetitem12);
         QTableWidgetItem *__qtablewidgetitem13 = new QTableWidgetItem();
-        tableWidget->setHorizontalHeaderItem(2, __qtablewidgetitem13);
+        tableWidget->setHorizontalHeaderItem(1, __qtablewidgetitem13);
         QTableWidgetItem *__qtablewidgetitem14 = new QTableWidgetItem();
-        tableWidget->setHorizontalHeaderItem(3, __qtablewidgetitem14);
+        tableWidget->setHorizontalHeaderItem(2, __qtablewidgetitem14);
         QTableWidgetItem *__qtablewidgetitem15 = new QTableWidgetItem();
-        tableWidget->setHorizontalHeaderItem(4, __qtablewidgetitem15);
+        tableWidget->setHorizontalHeaderItem(3, __qtablewidgetitem15);
         QTableWidgetItem *__qtablewidgetitem16 = new QTableWidgetItem();
-        tableWidget->setHorizontalHeaderItem(5, __qtablewidgetitem16);
+        tableWidget->setHorizontalHeaderItem(4, __qtablewidgetitem16);
         QTableWidgetItem *__qtablewidgetitem17 = new QTableWidgetItem();
-        tableWidget->setHorizontalHeaderItem(6, __qtablewidgetitem17);
+        tableWidget->setHorizontalHeaderItem(5, __qtablewidgetitem17);
+        QTableWidgetItem *__qtablewidgetitem18 = new QTableWidgetItem();
+        tableWidget->setHorizontalHeaderItem(6, __qtablewidgetitem18);
         tableWidget->setObjectName(QString::fromUtf8("tableWidget"));
 
         verticalLayout_6->addWidget(tableWidget);
@@ -674,20 +704,20 @@ public:
         tableWidget_4 = new QTableWidget(tab_6);
         if (tableWidget_4->columnCount() < 7)
             tableWidget_4->setColumnCount(7);
-        QTableWidgetItem *__qtablewidgetitem18 = new QTableWidgetItem();
-        tableWidget_4->setHorizontalHeaderItem(0, __qtablewidgetitem18);
         QTableWidgetItem *__qtablewidgetitem19 = new QTableWidgetItem();
-        tableWidget_4->setHorizontalHeaderItem(1, __qtablewidgetitem19);
+        tableWidget_4->setHorizontalHeaderItem(0, __qtablewidgetitem19);
         QTableWidgetItem *__qtablewidgetitem20 = new QTableWidgetItem();
-        tableWidget_4->setHorizontalHeaderItem(2, __qtablewidgetitem20);
+        tableWidget_4->setHorizontalHeaderItem(1, __qtablewidgetitem20);
         QTableWidgetItem *__qtablewidgetitem21 = new QTableWidgetItem();
-        tableWidget_4->setHorizontalHeaderItem(3, __qtablewidgetitem21);
+        tableWidget_4->setHorizontalHeaderItem(2, __qtablewidgetitem21);
         QTableWidgetItem *__qtablewidgetitem22 = new QTableWidgetItem();
-        tableWidget_4->setHorizontalHeaderItem(4, __qtablewidgetitem22);
+        tableWidget_4->setHorizontalHeaderItem(3, __qtablewidgetitem22);
         QTableWidgetItem *__qtablewidgetitem23 = new QTableWidgetItem();
-        tableWidget_4->setHorizontalHeaderItem(5, __qtablewidgetitem23);
+        tableWidget_4->setHorizontalHeaderItem(4, __qtablewidgetitem23);
         QTableWidgetItem *__qtablewidgetitem24 = new QTableWidgetItem();
-        tableWidget_4->setHorizontalHeaderItem(6, __qtablewidgetitem24);
+        tableWidget_4->setHorizontalHeaderItem(5, __qtablewidgetitem24);
+        QTableWidgetItem *__qtablewidgetitem25 = new QTableWidgetItem();
+        tableWidget_4->setHorizontalHeaderItem(6, __qtablewidgetitem25);
         tableWidget_4->setObjectName(QString::fromUtf8("tableWidget_4"));
 
         verticalLayout_7->addWidget(tableWidget_4);
@@ -772,8 +802,8 @@ public:
 
         retranslateUi(QtZhibanClass);
 
-        tabWidget->setCurrentIndex(1);
-        tabWidget_2->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(4);
+        tabWidget_2->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(QtZhibanClass);
@@ -795,7 +825,6 @@ public:
         pushButton_6->setText(QApplication::translate("QtZhibanClass", "\351\207\215\350\246\201\344\277\241\346\201\257", nullptr));
         groupBox_4->setTitle(QApplication::translate("QtZhibanClass", "\346\231\272\350\203\275\351\227\256\347\255\224", nullptr));
         pushButton_7->setText(QApplication::translate("QtZhibanClass", "\345\217\221\351\200\201", nullptr));
-        pushButton_8->setText(QApplication::translate("QtZhibanClass", "\351\207\215\350\246\201\344\277\241\346\201\257", nullptr));
         groupBox->setTitle(QApplication::translate("QtZhibanClass", "\351\200\232\350\256\257\345\275\225\346\237\245\350\257\242", nullptr));
         label_13->setText(QApplication::translate("QtZhibanClass", "\347\224\265\350\257\235\357\274\232", nullptr));
         label_10->setText(QApplication::translate("QtZhibanClass", "\345\215\225\344\275\215\357\274\232", nullptr));
@@ -821,8 +850,13 @@ public:
         QTableWidgetItem *___qtablewidgetitem9 = tableWidget_2->horizontalHeaderItem(5);
         ___qtablewidgetitem9->setText(QApplication::translate("QtZhibanClass", "\345\234\260\345\235\200", nullptr));
         QTableWidgetItem *___qtablewidgetitem10 = tableWidget_2->horizontalHeaderItem(6);
-        ___qtablewidgetitem10->setText(QApplication::translate("QtZhibanClass", "ID", nullptr));
+        ___qtablewidgetitem10->setText(QApplication::translate("QtZhibanClass", "\347\224\250\346\210\267\347\224\273\345\203\217", nullptr));
+        QTableWidgetItem *___qtablewidgetitem11 = tableWidget_2->horizontalHeaderItem(7);
+        ___qtablewidgetitem11->setText(QApplication::translate("QtZhibanClass", "ID", nullptr));
         groupBox_3->setTitle(QApplication::translate("QtZhibanClass", "\345\256\236\346\227\266\350\257\255\351\237\263", nullptr));
+        pushButton_19->setText(QApplication::translate("QtZhibanClass", "\345\211\252\345\210\207", nullptr));
+        pushButton_13->setText(QApplication::translate("QtZhibanClass", "\345\244\215\345\210\266", nullptr));
+        pushButton_18->setText(QApplication::translate("QtZhibanClass", "\346\270\205\347\251\272", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_1), QApplication::translate("QtZhibanClass", "\351\246\226\351\241\265", nullptr));
         removeRowAction->setText(QApplication::translate("QtZhibanClass", "\345\210\240\351\231\244\350\241\214", nullptr));
         insertRowAction->setText(QApplication::translate("QtZhibanClass", "\346\217\222\345\205\245\350\241\214", nullptr));
@@ -841,20 +875,20 @@ public:
         label_14->setText(QApplication::translate("QtZhibanClass", "\347\224\265\350\257\235\357\274\232", nullptr));
         label_18->setText(QApplication::translate("QtZhibanClass", "\345\247\223\345\220\215\357\274\232", nullptr));
         pushButton_2->setText(QApplication::translate("QtZhibanClass", "\344\277\235\345\255\230", nullptr));
-        QTableWidgetItem *___qtablewidgetitem11 = tableWidget->horizontalHeaderItem(0);
-        ___qtablewidgetitem11->setText(QApplication::translate("QtZhibanClass", "\345\247\223\345\220\215", nullptr));
-        QTableWidgetItem *___qtablewidgetitem12 = tableWidget->horizontalHeaderItem(1);
-        ___qtablewidgetitem12->setText(QApplication::translate("QtZhibanClass", "\346\200\247\345\210\253", nullptr));
-        QTableWidgetItem *___qtablewidgetitem13 = tableWidget->horizontalHeaderItem(2);
-        ___qtablewidgetitem13->setText(QApplication::translate("QtZhibanClass", "\345\215\225\344\275\215", nullptr));
-        QTableWidgetItem *___qtablewidgetitem14 = tableWidget->horizontalHeaderItem(3);
-        ___qtablewidgetitem14->setText(QApplication::translate("QtZhibanClass", "\347\224\265\350\257\235", nullptr));
-        QTableWidgetItem *___qtablewidgetitem15 = tableWidget->horizontalHeaderItem(4);
-        ___qtablewidgetitem15->setText(QApplication::translate("QtZhibanClass", "\346\211\213\346\234\272\345\217\267", nullptr));
-        QTableWidgetItem *___qtablewidgetitem16 = tableWidget->horizontalHeaderItem(5);
-        ___qtablewidgetitem16->setText(QApplication::translate("QtZhibanClass", "\345\234\260\345\235\200", nullptr));
-        QTableWidgetItem *___qtablewidgetitem17 = tableWidget->horizontalHeaderItem(6);
-        ___qtablewidgetitem17->setText(QApplication::translate("QtZhibanClass", "ID", nullptr));
+        QTableWidgetItem *___qtablewidgetitem12 = tableWidget->horizontalHeaderItem(0);
+        ___qtablewidgetitem12->setText(QApplication::translate("QtZhibanClass", "\345\247\223\345\220\215", nullptr));
+        QTableWidgetItem *___qtablewidgetitem13 = tableWidget->horizontalHeaderItem(1);
+        ___qtablewidgetitem13->setText(QApplication::translate("QtZhibanClass", "\346\200\247\345\210\253", nullptr));
+        QTableWidgetItem *___qtablewidgetitem14 = tableWidget->horizontalHeaderItem(2);
+        ___qtablewidgetitem14->setText(QApplication::translate("QtZhibanClass", "\345\215\225\344\275\215", nullptr));
+        QTableWidgetItem *___qtablewidgetitem15 = tableWidget->horizontalHeaderItem(3);
+        ___qtablewidgetitem15->setText(QApplication::translate("QtZhibanClass", "\347\224\265\350\257\235", nullptr));
+        QTableWidgetItem *___qtablewidgetitem16 = tableWidget->horizontalHeaderItem(4);
+        ___qtablewidgetitem16->setText(QApplication::translate("QtZhibanClass", "\346\211\213\346\234\272\345\217\267", nullptr));
+        QTableWidgetItem *___qtablewidgetitem17 = tableWidget->horizontalHeaderItem(5);
+        ___qtablewidgetitem17->setText(QApplication::translate("QtZhibanClass", "\345\234\260\345\235\200", nullptr));
+        QTableWidgetItem *___qtablewidgetitem18 = tableWidget->horizontalHeaderItem(6);
+        ___qtablewidgetitem18->setText(QApplication::translate("QtZhibanClass", "ID", nullptr));
         tabWidget_2->setTabText(tabWidget_2->indexOf(tab_2), QApplication::translate("QtZhibanClass", "\344\272\272\345\221\230\347\256\241\347\220\206", nullptr));
         tabWidget_2->setTabText(tabWidget_2->indexOf(tab_7), QApplication::translate("QtZhibanClass", "\347\224\250\346\210\267\347\224\273\345\203\217", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_4), QApplication::translate("QtZhibanClass", "\351\200\232\350\256\257\345\275\225\347\256\241\347\220\206", nullptr));
@@ -865,8 +899,8 @@ public:
         tabWidget->setTabText(tabWidget->indexOf(tab_8), QApplication::translate("QtZhibanClass", "\346\200\201\345\212\277\347\273\237\350\256\241", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_3), QApplication::translate("QtZhibanClass", "\345\200\274\347\217\255\347\273\237\350\256\241", nullptr));
         pushButton_14->setText(QApplication::translate("QtZhibanClass", "\344\277\235\345\255\230", nullptr));
-        comboBox_3->setItemText(0, QApplication::translate("QtZhibanClass", "\347\224\267\346\200\247", nullptr));
-        comboBox_3->setItemText(1, QApplication::translate("QtZhibanClass", "\345\245\263\346\200\247", nullptr));
+        comboBox_3->setItemText(0, QApplication::translate("QtZhibanClass", "\345\245\263\346\200\247", nullptr));
+        comboBox_3->setItemText(1, QApplication::translate("QtZhibanClass", "\347\224\267\346\200\247", nullptr));
 
         pushButton_12->setText(QApplication::translate("QtZhibanClass", "\346\237\245\350\257\242", nullptr));
         label_22->setText(QApplication::translate("QtZhibanClass", "\350\201\214\345\212\241\357\274\232", nullptr));
@@ -876,21 +910,21 @@ public:
         pushButton_11->setText(QApplication::translate("QtZhibanClass", "\351\207\215\347\275\256", nullptr));
         label_25->setText(QApplication::translate("QtZhibanClass", "\345\215\225\344\275\215\357\274\232", nullptr));
         label_20->setText(QApplication::translate("QtZhibanClass", "\345\247\223\345\220\215\357\274\232", nullptr));
-        QTableWidgetItem *___qtablewidgetitem18 = tableWidget_4->horizontalHeaderItem(0);
-        ___qtablewidgetitem18->setText(QApplication::translate("QtZhibanClass", "\345\247\223\345\220\215", nullptr));
-        QTableWidgetItem *___qtablewidgetitem19 = tableWidget_4->horizontalHeaderItem(1);
-        ___qtablewidgetitem19->setText(QApplication::translate("QtZhibanClass", "\346\200\247\345\210\253", nullptr));
-        QTableWidgetItem *___qtablewidgetitem20 = tableWidget_4->horizontalHeaderItem(2);
-        ___qtablewidgetitem20->setText(QApplication::translate("QtZhibanClass", "\345\215\225\344\275\215", nullptr));
-        QTableWidgetItem *___qtablewidgetitem21 = tableWidget_4->horizontalHeaderItem(3);
-        ___qtablewidgetitem21->setText(QApplication::translate("QtZhibanClass", "\347\224\265\350\257\235", nullptr));
-        QTableWidgetItem *___qtablewidgetitem22 = tableWidget_4->horizontalHeaderItem(4);
-        ___qtablewidgetitem22->setText(QApplication::translate("QtZhibanClass", "\346\211\213\346\234\272\345\217\267", nullptr));
-        QTableWidgetItem *___qtablewidgetitem23 = tableWidget_4->horizontalHeaderItem(5);
-        ___qtablewidgetitem23->setText(QApplication::translate("QtZhibanClass", "\345\234\260\345\235\200", nullptr));
-        QTableWidgetItem *___qtablewidgetitem24 = tableWidget_4->horizontalHeaderItem(6);
-        ___qtablewidgetitem24->setText(QApplication::translate("QtZhibanClass", "ID", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab_6), QApplication::translate("QtZhibanClass", "\347\224\250\346\210\267\347\256\241\347\220\206", nullptr));
+        QTableWidgetItem *___qtablewidgetitem19 = tableWidget_4->horizontalHeaderItem(0);
+        ___qtablewidgetitem19->setText(QApplication::translate("QtZhibanClass", "\345\247\223\345\220\215", nullptr));
+        QTableWidgetItem *___qtablewidgetitem20 = tableWidget_4->horizontalHeaderItem(1);
+        ___qtablewidgetitem20->setText(QApplication::translate("QtZhibanClass", "\346\200\247\345\210\253", nullptr));
+        QTableWidgetItem *___qtablewidgetitem21 = tableWidget_4->horizontalHeaderItem(2);
+        ___qtablewidgetitem21->setText(QApplication::translate("QtZhibanClass", "\345\215\225\344\275\215", nullptr));
+        QTableWidgetItem *___qtablewidgetitem22 = tableWidget_4->horizontalHeaderItem(3);
+        ___qtablewidgetitem22->setText(QApplication::translate("QtZhibanClass", "\347\224\265\350\257\235", nullptr));
+        QTableWidgetItem *___qtablewidgetitem23 = tableWidget_4->horizontalHeaderItem(4);
+        ___qtablewidgetitem23->setText(QApplication::translate("QtZhibanClass", "\346\211\213\346\234\272\345\217\267", nullptr));
+        QTableWidgetItem *___qtablewidgetitem24 = tableWidget_4->horizontalHeaderItem(5);
+        ___qtablewidgetitem24->setText(QApplication::translate("QtZhibanClass", "\345\234\260\345\235\200", nullptr));
+        QTableWidgetItem *___qtablewidgetitem25 = tableWidget_4->horizontalHeaderItem(6);
+        ___qtablewidgetitem25->setText(QApplication::translate("QtZhibanClass", "ID", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab_6), QApplication::translate("QtZhibanClass", "\347\231\273\345\275\225\347\256\241\347\220\206", nullptr));
         label_4->setText(QApplication::translate("QtZhibanClass", "\344\277\241\346\201\257\351\200\237\350\256\260\347\253\257\345\217\243\345\217\267\357\274\232", nullptr));
         pushButton_17->setText(QApplication::translate("QtZhibanClass", "\344\277\235\345\255\230", nullptr));
         pushButton_16->setText(QApplication::translate("QtZhibanClass", "\344\277\235\345\255\230", nullptr));

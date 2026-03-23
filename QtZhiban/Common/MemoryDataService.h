@@ -16,15 +16,13 @@ public:
 	QDate GetcurrDate();
 	void SetcurrDate(QDate currDate);
 
-	// 席位
-	QList<loginStruct> GetSeatList();
-	void AddSeatNameList(QList<loginStruct> namelist);
-	QMap<int, loginStruct> GetSeatMap();
-	void AddSeatNameMap(QMap<int, loginStruct> nameMap);
-
-	// 当前席位
-	int GetSeatName();
-	void SetCurrSeatName(int currName);
+	// 登录用户
+	QList<loginStruct> GetLoginList();
+	void SetLoginList(QList<loginStruct> namelist);
+	QMap<int, loginStruct> GetLoginMap();
+	void SetLoginMap(QMap<int, loginStruct> nameMap);
+	int GetCurrentLoginID();
+	void SetCurrentLoginID(int currentloginID);
 
 	// 数据库配置表，包含tab页
 	QMap<int, sqlConfig> Getsqlconfig();

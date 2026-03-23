@@ -77,8 +77,8 @@ void Login::InitWidget()
         if (!success)
         {
             QString err = query.lastError().databaseText();
-            LOG_ERROR(QString::fromLocal8Bit("数据库读取时间失败：%s"), err.toStdString());
-            messageTipService->showTip(QStringLiteral("数据库读取时间失败！"), TipType::TT_FAILED);
+            LOG_ERROR(QString::fromLocal8Bit("读取数据库时间失败：%s"), err.toStdString());
+            messageTipService->showTip(QStringLiteral("读取数据库时间失败！"), TipType::TT_FAILED);
         }
         if (success)
         {
@@ -99,8 +99,8 @@ void Login::InitWidget()
         if (!success)
         {
             QString err = query.lastError().databaseText();
-            LOG_ERROR(QString::fromLocal8Bit("数据库读取席位失败：%s"), err.toStdString());
-            messageTipService->showTip(QStringLiteral("数据库读取席位失败！"), TipType::TT_FAILED);
+            LOG_ERROR(QString::fromLocal8Bit("数据库读取登录用户失败：%s"), err.toStdString());
+            messageTipService->showTip(QStringLiteral("数据库读取登录用户失败！"), TipType::TT_FAILED);
         }
         if (success)
         {
@@ -118,12 +118,8 @@ void Login::InitWidget()
                 xiweistructs_map.insert(xiwei.id, xiwei);
                 // messageTipService->showTip(QStringLiteral("更新成功！"), TipType::TT_SUCESS);
             }
-            memoryDataService->AddSeatNameList(xiweistructs);
-            memoryDataService->AddSeatNameMap(xiweistructs_map);
-        	for (auto xiweistruct :xiweistructs)
-            {
-                ui->comboBox->addItem(xiweistruct.name);
-            }
+            memoryDataService->SetLoginList(xiweistructs);
+            memoryDataService->SetLoginMap(xiweistructs_map);
         }
 
         query.clear();
@@ -261,7 +257,7 @@ void Login::InitWidget()
         //         sslist.append(xiwei);
         //         // messageTipService->showTip(QStringLiteral("更新成功！"), TipType::TT_SUCESS);
         //     }
-        //     memoryDataService->AddSeatNameList(sslist);
+        //     memoryDataService->SetLoginList(sslist);
         //     int a = 1;
         //     for (auto name : sslist)
         //     {
@@ -289,29 +285,18 @@ void Login::InitWidget()
 
 void Login::on_btn_signin_clicked()
 {
-    // qtzhiban.cpp 103行拿到这里，席位编号从1开始
-    // 第二次修改，前6个席位登录界面设置为一个席位，汇报界面隐藏前6个席位
-    // 第三次修改，取消上级机关下的6个席位
-    QList<loginStruct> xiweistructs = memoryDataService->GetSeatList();
-    int seatID = 0;
-    QString password;
-    for (auto xiweistruct : xiweistructs)
+    QList<loginStruct> login_structs = memoryDataService->GetLoginList();
+    for (auto login_struct : login_structs)
     {
-	    if (ui->comboBox->currentText() == xiweistruct.name)
+	    if (ui->lineEdit->text() == login_struct.name && ui->lineEdit_password->text() == login_struct.password)
 	    {
-            seatID = xiweistruct.id;
-            password = xiweistruct.password;
+            qint64 loginID = login_struct.id;
+	    	memoryDataService->SetCurrentLoginID(loginID);
+	    	accept();
+			return;
 	    }
     }
-	memoryDataService->SetCurrSeatName(seatID);
-
-    if (password != ui->lineEdit_password->text())
-    {
-        // QMessageBox::information(this, "登录认证", "登录失败,账户或者密码错误");
-        QMessageBox::critical(this, QString::fromLocal8Bit("警告"), QStringLiteral("用户名或密码错误！"));
-    }
-    else
-    {
-        accept();
-    }
+    
+    // QMessageBox::information(this, "登录认证", "登录失败,账户或者密码错误");
+    QMessageBox::critical(this, QString::fromLocal8Bit("警告"), QStringLiteral("用户名或密码错误！")); 
 }

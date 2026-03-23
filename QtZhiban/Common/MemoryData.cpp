@@ -2,7 +2,7 @@
 
 MemoryData::MemoryData()
 {
-	curSeatName = 0;
+	currentloginID = 0;
 }
 
 MemoryData::~MemoryData()

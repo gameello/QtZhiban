@@ -7,6 +7,7 @@
 #include <QObject>
 #include "PlanParse/PlanTemplate.h"
 
+// 登录用户
 struct loginStruct
 {
 	qint64 id;					// 64位UUID
@@ -20,6 +21,7 @@ struct loginStruct
 	QString zhiwu = "";			// 职务
 };
 
+// 通讯录用户
 struct contactUserStruct
 {
 	qint64 id;					// 64位UUID
@@ -57,12 +59,12 @@ public:
 	~MemoryData();
 
 	// 当前日期
-	QDate currDate;
+	QDate currentDate;
 
-	// 当前席位id
-	int curSeatName;
+	// 当前登录用户ID
+	qint64 currentloginID;
 
-	// 席位名称
+	// 登录用户数据
 	QStringList loginList_name;
 	QList<loginStruct> loginList;
 	QMap<int, loginStruct> loginMap;

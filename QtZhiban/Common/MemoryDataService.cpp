@@ -23,42 +23,42 @@ MemoryDataService* MemoryDataService::instance() {
 
 QDate MemoryDataService::GetcurrDate()
 {
-	return data.currDate;
+	return data.currentDate;
 }
 
 void MemoryDataService::SetcurrDate(QDate currDate)
 {
-	data.currDate = currDate;
+	data.currentDate = currDate;
 }
 
-QList<loginStruct> MemoryDataService::GetSeatList()
+QList<loginStruct> MemoryDataService::GetLoginList()
 {
 	return data.loginList;
 }
 
-void MemoryDataService::AddSeatNameList(QList<loginStruct> namelist)
+void MemoryDataService::SetLoginList(QList<loginStruct> namelist)
 {
 	data.loginList = namelist;
 }
 
-QMap<int, loginStruct> MemoryDataService::GetSeatMap()
+QMap<int, loginStruct> MemoryDataService::GetLoginMap()
 {
 	return data.loginMap;
 }
 
-void MemoryDataService::AddSeatNameMap(QMap<int, loginStruct> nameMap)
+void MemoryDataService::SetLoginMap(QMap<int, loginStruct> nameMap)
 {
 	data.loginMap = nameMap;
 }
 
-int MemoryDataService::GetSeatName()
+int MemoryDataService::GetCurrentLoginID()
 {
-	return data.curSeatName;
+	return data.currentloginID;
 }
 
-void MemoryDataService::SetCurrSeatName(int currName)
+void MemoryDataService::SetCurrentLoginID(int currentloginID)
 {
-	data.curSeatName = currName;
+	data.currentloginID = currentloginID;
 }
 
 QMap<int, sqlConfig> MemoryDataService::Getsqlconfig()

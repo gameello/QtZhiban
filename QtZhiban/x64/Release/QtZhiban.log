@@ -1,3 +1,101 @@
 ﻿   Qt/MSBuild: 3.4.1.0
+  Reading Qt configuration (C:/Qt/Qt5.12.1/5.12.1/msvc2017_64/bin/qmake)
    Qt: 5.12.1
+  uic Login.ui
+  uic PlanParse\ImageBrowseWidget.ui
+  uic PlanParse\TextMaterialWidget.ui
+  uic QtZhiban.ui
+  uic Tip\MessageDialog.ui
+  uic Tip\MessagePanel.ui
+  uic Tip\TipPanel.ui
+  rcc QtZhiban.qrc
+  rcc Resources\images.qrc
+  rcc Resources\qm.qrc
+  rcc Resources\qss.qrc
+  moc QtZhiban.h
+  moc PlanParse\ImageBrowseWidget.h
+  moc PlanParse\TextMaterialWidget.h
+  moc Login.h
+  moc PlanParse\treemodel.h
+  moc Ui\MyTitleBar.h
+  moc Ui\Color\ColorComboBox.h
+  moc Ui\Color\MyColorDialog.h
+  moc Tip\MessageDialog.h
+  moc Tip\MessagePanel.h
+  moc Tip\MessageTipService.h
+  moc Tip\TipPanel.h
+  moc PlanParse\PlanTemplate.h
+  moc PlanParse\XMLPlanParse.h
+  moc Ui\ModalessDialog.h
+  moc Ui\ModalDialog.h
+  moc Ui\FramelessWidget.h
+  moc Ui\FramelessDialog.h
+  moc Ui\CustomLineEdit.h
+  moc Ui\CheckBoxHeaderView.h
+  moc Log\QtCLog.h
+  moc Common\MemoryDataService.h
+  moc Common\SettingService.h
+  IdGenerateHelper.cpp
+  Login.cpp
+  BlockUserData.cpp
+  ContentEntity.cpp
+  ImageBrowseWidget.cpp
+  PlanTemplate.cpp
+  TextMaterialWidget.cpp
+  treeitem.cpp
+  treemodel.cpp
+  XMLPlanParse.cpp
+  MessageDialog.cpp
+  MessagePanel.cpp
+  MessageTipService.cpp
+  TipPanel.cpp
+  CheckBoxHeaderView.cpp
+  ColorComboBox.cpp
+  MyColorDialog.cpp
+  CustomLineEdit.cpp
+  FramelessDialog.cpp
+  FramelessWidget.cpp
+  ModalDialog.cpp
+  ModalessDialog.cpp
+  MyTitleBar.cpp
+  global.cpp
+  MemoryData.cpp
+  MemoryDataService.cpp
+  SettingService.cpp
+  Utils.cpp
+  ConnectionPool.cpp
+  QtCLog.cpp
+  QtZhiban.cpp
+  main.cpp
+  qrc_QtZhiban.cpp
+  qrc_images.cpp
+  qrc_qm.cpp
+  qrc_qss.cpp
+  moc_QtZhiban.cpp
+  moc_ImageBrowseWidget.cpp
+  moc_TextMaterialWidget.cpp
+  moc_Login.cpp
+  moc_treemodel.cpp
+  moc_MyTitleBar.cpp
+  moc_ColorComboBox.cpp
+  moc_MyColorDialog.cpp
+  moc_MessageDialog.cpp
+  moc_MessagePanel.cpp
+  moc_MessageTipService.cpp
+  moc_TipPanel.cpp
+  moc_PlanTemplate.cpp
+  moc_XMLPlanParse.cpp
+  moc_ModalessDialog.cpp
+  moc_ModalDialog.cpp
+  moc_FramelessWidget.cpp
+  moc_FramelessDialog.cpp
+  moc_CustomLineEdit.cpp
+  moc_CheckBoxHeaderView.cpp
+  moc_QtCLog.cpp
+  moc_MemoryDataService.cpp
+  moc_SettingService.cpp
+  正在生成代码
+  Previous IPDB not found, fall back to full compilation.
+  All 1142 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  已完成代码的生成
   QtZhiban.vcxproj -> D:\4_SZ\QtZhiban\x64\Release\QtZhiban.exe
