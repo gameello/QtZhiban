@@ -7,20 +7,29 @@
 #include <QObject>
 #include "PlanParse/PlanTemplate.h"
 
-struct xiweistruct
+struct loginStruct
 {
-	int id;
-	QString name = "";
-	QString password = "";
-	int level = 0;
+	qint64 id;					// 64位UUID
+	QString name = "";			// 登录用户名
+	QString password = "";		// 密码
+	int level = 0;				// 话务员级别，不同级别登录软件界面显示不同
+	bool xingbie = 0;			// 默认为女0，男为1
+	QString dianhua = "";		// 电话
+	QString shoujihao = "";		// 手机号
+	QString danwei = "";		// 单位
+	QString zhiwu = "";			// 职务
 };
 
-struct renyuanstruct
+struct contactUserStruct
 {
-	int id;
-	QString name = "";
-	QString zhiwu = "";
-	int xiwei = 0;
+	qint64 id;					// 64位UUID
+	QString name = "";			// 姓名
+	int xiwei = 0;				// 所属席位，无用
+	bool xingbie = 0;			// 默认为女0，男为1
+	QString dianhua = "";		// 电话
+	QString shoujihao = "";		// 手机号
+	QString danwei = "";		// 单位
+	QString zhiwu = "";			// 职务
 };
 
 struct sqlConfig
@@ -54,9 +63,9 @@ public:
 	int curSeatName;
 
 	// 席位名称
-	QStringList SeatNamelist;
-	QList<xiweistruct> XiweiList;
-	QMap<int, xiweistruct> XiweiMap;
+	QStringList loginList_name;
+	QList<loginStruct> loginList;
+	QMap<int, loginStruct> loginMap;
 
 	// 数据库配置表，包含tab页名称
 	QMap<int, sqlConfig> sql_configs;
@@ -64,7 +73,7 @@ public:
 	// 人员信息
 	QStringList Renyuanlist;
 	QStringList Zhiwulist;
-	QMap<int, QList<renyuanstruct>> Renyuanstructs;
+	QMap<int, QList<contactUserStruct>> Renyuanstructs;
 	QMap<int, QList<QString>> renyuanmap;
 	QMap<int, QList<QString>> zhiwumap;
 	QHash<QString, QString> Renyuanzhiwu;

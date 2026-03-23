@@ -104,12 +104,12 @@ void Login::InitWidget()
         }
         if (success)
         {
-            QList<xiweistruct> xiweistructs;
-            QMap<int, xiweistruct> xiweistructs_map;
+            QList<loginStruct> xiweistructs;
+            QMap<int, loginStruct> xiweistructs_map;
             while (query.next())
             {
                 QSqlRecord dataLine = query.record();
-                xiweistruct xiwei;
+                loginStruct xiwei;
                 xiwei.id = dataLine.value("id").toInt();
                 xiwei.name = dataLine.value("xiwei").toString();
                 xiwei.password = dataLine.value("password").toString();
@@ -184,18 +184,18 @@ void Login::InitWidget()
         }
         if (success)
         {
-            QMap<int, QList<renyuanstruct>> map;
+            QMap<int, QList<contactUserStruct>> map;
             QMap<int, QList<QString>> renyuanmap;
             QMap<int, QList<QString>> zhiwumap;
             while (query.next())
             {
                 QSqlRecord dataLine = query.record();
-                renyuanstruct renyuanstruc;
+                contactUserStruct renyuanstruc;
                 renyuanstruc.id = dataLine.value("id").toInt();
                 renyuanstruc.name = dataLine.value("name").toString();
                 renyuanstruc.zhiwu = dataLine.value("zhiwu").toString();
                 renyuanstruc.xiwei = dataLine.value("xiwei").toInt();
-                QList<renyuanstruct> renyuanstructs = map.value(renyuanstruc.xiwei);
+                QList<contactUserStruct> renyuanstructs = map.value(renyuanstruc.xiwei);
                 renyuanstructs.append(renyuanstruc);
                 map.insert(renyuanstruc.xiwei, renyuanstructs);
 
@@ -249,11 +249,11 @@ void Login::InitWidget()
         // }
         // if (success)
         // {
-        //     QList<xiweistruct> sslist;
+        //     QList<loginStruct> sslist;
         //     while (query.next())
         //     {
         //         QSqlRecord dataLine = query.record();
-        //         xiweistruct xiwei;
+        //         loginStruct xiwei;
         //         xiwei.id = dataLine.value("id").toInt();
         //         xiwei.name = dataLine.value("xiwei").toString();
         //         xiwei.password = dataLine.value("password").toString();
@@ -292,7 +292,7 @@ void Login::on_btn_signin_clicked()
     // qtzhiban.cpp 103行拿到这里，席位编号从1开始
     // 第二次修改，前6个席位登录界面设置为一个席位，汇报界面隐藏前6个席位
     // 第三次修改，取消上级机关下的6个席位
-    QList<xiweistruct> xiweistructs = memoryDataService->GetSeatList();
+    QList<loginStruct> xiweistructs = memoryDataService->GetSeatList();
     int seatID = 0;
     QString password;
     for (auto xiweistruct : xiweistructs)

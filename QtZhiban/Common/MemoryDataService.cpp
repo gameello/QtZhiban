@@ -31,24 +31,24 @@ void MemoryDataService::SetcurrDate(QDate currDate)
 	data.currDate = currDate;
 }
 
-QList<xiweistruct> MemoryDataService::GetSeatList()
+QList<loginStruct> MemoryDataService::GetSeatList()
 {
-	return data.XiweiList;
+	return data.loginList;
 }
 
-void MemoryDataService::AddSeatNameList(QList<xiweistruct> namelist)
+void MemoryDataService::AddSeatNameList(QList<loginStruct> namelist)
 {
-	data.XiweiList = namelist;
+	data.loginList = namelist;
 }
 
-QMap<int, xiweistruct> MemoryDataService::GetSeatMap()
+QMap<int, loginStruct> MemoryDataService::GetSeatMap()
 {
-	return data.XiweiMap;
+	return data.loginMap;
 }
 
-void MemoryDataService::AddSeatNameMap(QMap<int, xiweistruct> nameMap)
+void MemoryDataService::AddSeatNameMap(QMap<int, loginStruct> nameMap)
 {
-	data.XiweiMap = nameMap;
+	data.loginMap = nameMap;
 }
 
 int MemoryDataService::GetSeatName()
@@ -81,12 +81,12 @@ void MemoryDataService::SetSqlconfig(QMap<int, sqlConfig> map)
 // 	data.Zhiwulist = zhiwuList;
 // }
 
-QMap<int, QList<renyuanstruct>> MemoryDataService::GetRenyuanStructs()
+QMap<int, QList<contactUserStruct>> MemoryDataService::GetRenyuanStructs()
 {
 	return data.Renyuanstructs;
 }
 
-void MemoryDataService::SetRenyuanStructs(QMap<int, QList<renyuanstruct>> renmingList)
+void MemoryDataService::SetRenyuanStructs(QMap<int, QList<contactUserStruct>> renmingList)
 {
 	data.Renyuanstructs = renmingList;
 }

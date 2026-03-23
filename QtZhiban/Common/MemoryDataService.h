@@ -17,10 +17,10 @@ public:
 	void SetcurrDate(QDate currDate);
 
 	// 席位
-	QList<xiweistruct> GetSeatList();
-	void AddSeatNameList(QList<xiweistruct> namelist);
-	QMap<int, xiweistruct> GetSeatMap();
-	void AddSeatNameMap(QMap<int, xiweistruct> nameMap);
+	QList<loginStruct> GetSeatList();
+	void AddSeatNameList(QList<loginStruct> namelist);
+	QMap<int, loginStruct> GetSeatMap();
+	void AddSeatNameMap(QMap<int, loginStruct> nameMap);
 
 	// 当前席位
 	int GetSeatName();
@@ -37,8 +37,8 @@ public:
 	// 人员
 	// QStringList GetRenyuanList();
 	// void SetRenyuanList(QStringList renmingList);
-	QMap<int, QList<renyuanstruct>>  GetRenyuanStructs();
-	void SetRenyuanStructs(QMap<int, QList<renyuanstruct>> renmingList);
+	QMap<int, QList<contactUserStruct>>  GetRenyuanStructs();
+	void SetRenyuanStructs(QMap<int, QList<contactUserStruct>> renmingList);
 	QMap<int, QList<QString>> GetRenyuanMap();
 	void SetRenyuanMap(QMap<int, QList<QString>> renyuanmap);
 	QMap<int, QList<QString>> GetZhiwuMap();
